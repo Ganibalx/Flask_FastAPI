@@ -1,0 +1,8 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+img{
+    width: 200px;
+}

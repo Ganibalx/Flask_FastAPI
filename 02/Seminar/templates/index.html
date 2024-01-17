@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./index.css') }}">
+</head>
+<body>
+    <h1>Нажми на кнопку, получишь результат</h1>
+    <img src="{{ url_for('static', filename='./img.jpg')}}" alt="Картинка">
+    <a href="{{ url_for('page') }}">Вот на эту</a>
+    <a href="{{url_for('login')}}">Страница регистрации</a>
+    <a href="{{url_for('counter')}}">Форма ввода слов</a>
+</body>
+</html>

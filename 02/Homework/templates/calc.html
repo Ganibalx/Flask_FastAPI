@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{{url_for('index')}}">На главную</a>
+
+{% if result %}
+<h2>Результат операции {{result}}</h2>
+<a href="{{url_for('calc')}}">Назад</a>
+{%else%}
+<form action="{{url_for('calc')}}" method="post" style="display: flex; flex-direction: column; align-items: center">
+    <label>
+        Введите число a:
+        <input type="number" name="a">
+    </label>
+    <label>
+        Введите число b:
+        <input type="number" name="b">
+    </label>
+
+        Выберите операцию:
+    <label>+<input type="radio" name="oper" value="+" checked></label>
+    <label>-<input type="radio" name="oper" value="-"></label>
+    <label>*<input type="radio" name="oper" value="*"></label>
+    <label>/<input type="radio" name="oper" value="/"></label>
+    <input type="submit" value="Отправить">
+</form>
+{% endif %}
+</body>
+</html>

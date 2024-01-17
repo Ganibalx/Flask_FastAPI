@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{{url_for('index')}}">На главную</a>
+    {%if age%}
+    Возраст {{name}} - {{age}}
+    {%elif fail%}
+    Введен не корректный возраст
+    {%else%}
+    <form action="{{url_for('age')}}" method="post">
+        <label>Введите имя: <input type="text" name="name"></label>
+        <label>Введите возраст: <input type="number" name="age"></label>
+        <input type="submit" value="Отправить">
+    </form>
+    {%endif%}
+</body>
+</html>

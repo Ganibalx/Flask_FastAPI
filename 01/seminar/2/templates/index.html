@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя первая страница</title>
+</head>
+<body>
+    <h1 style="text-align: center">Это первая страница на flask</h1>
+    <table>
+        <tr><td>Имя</td>
+            <td>Фамилия</td>
+            <td>Возраст</td>
+            <td>Средний бал</td>
+        </tr>
+        {% for student in context%}
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.fam}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.score}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

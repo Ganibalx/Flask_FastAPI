@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{{url_for('counter')}}" method="post">
+    <label>
+        введите текст
+        <textarea cols=30 rows=5 name="text"> </textarea>
+    </label>
+    <input type="submit" value="отправить">
+</form>
+</body>
+</html>
