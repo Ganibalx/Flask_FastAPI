@@ -26,7 +26,7 @@ def index():
         if form.validate():
             user = User(user_name=form.username.data,
                 email=form.email.data,
-                password=form.password.data
+                password=generate_password_hash(form.password.data)
             )
             db.session.add(user)
             db.session.commit()
